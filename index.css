@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background:linear-gradient(90deg,rgb(25, 25, 70), rgb(102, 107, 167));
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main{
+   width: 250px;
+   height: 300px;
+   transform-style: preserve-3d;
+   transform: rotateY(-60deg);
+   animation: rotate 4s infinite linear;
+}
+
+.main div{
+    width: 250px;
+   height: 300px;
+    position: absolute;
+    
+}
+.main div:first-child{
+    background:linear-gradient(orange, rgb(150, 109, 48));
+    transform: rotateX(45deg);
+    border-radius: 15px;
+}
+
+.main div:nth-child(2){
+    background:linear-gradient(red, rgb(150, 60, 60));
+    transform: rotateX(-45deg);
+    border-radius: 15px;
+}
+
+.main div:nth-child(3){
+    background:linear-gradient(blue, rgb(118, 108, 207));
+    transform: rotateX(0deg);
+    border-radius: 15px;
+}
+
+.main div:nth-child(4){
+    background:linear-gradient(rgb(94, 255, 0), rgb(67, 124, 41));
+    transform: rotateX(90deg);
+    border-radius: 15px;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateY(-60deg) rotateX(0deg);
+    }
+
+    0%{
+        transform: rotateY(-60deg) rotateX(359deg);
+    }
+}
